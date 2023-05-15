@@ -1,0 +1,13 @@
+<div class="searchArea">
+    <p> Input avec recherche de pays en Angular 13</p>
+    <label class="pays" for="pays">Pays</label>
+    <input id="pays" type="text" #input (blur)="onBlur()" (focus)="onFocus()" />
+    <ul class="ListPays" *ngIf="currentPays.length > 0">
+        <li
+            *ngFor="let pays of currentPays"
+            (click)="selectPays($event)"
+        >
+            {{ pays.libelle }}
+        </li>
+    </ul>
+</div>>
